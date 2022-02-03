@@ -19,13 +19,13 @@ export default function Home(){
         onClick={() => navigateToPage('/rooms')}
         className="page-button"
       >
-        View All Rooms
+        Food Menu
       </button>
       <button
         onClick={() => navigateToPage('/users')}
         className="page-button"
       >
-        View All Users
+        Drink Menu
       </button> 
     </div>
   );
