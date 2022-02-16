@@ -1,6 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import NavBar from '../../components/Navbar'
+
 export default function Home(){
   const history = useHistory();
 
@@ -9,11 +9,27 @@ export default function Home(){
   }
 
   return (
-  
     <div className="content">
+
+
+      <ul>
+      <li><a class="active" href="https://www.google.com/">Home</a></li>
+      <li><a href="#news">Food menu</a></li>
+      <li><a href="#contact">Drink Menu</a></li>
+      <li><a href="www.google.com">Delivery!</a></li>
+     </ul>
+     
+
+
 
       <h1> Pancake Flippers </h1>
       <h1>🤗 Welcome!</h1>
+      <button
+        onClick={() => navigateToPage('/foodmenu')}
+        className="page-button"
+      >
+        Food Menu
+      </button>
       <button
         onClick={() => navigateToPage('/users')}
         className="page-button"

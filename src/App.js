@@ -4,12 +4,17 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
 import Users from './pages/Users/Users';
-
+import NavBar from './components/Navbar'
 import './App.css';
 
 function App() {
   return (
+
     <div className="root">
+      <div className="navbar">
+      <NavBar />
+      </div>
+    
       <div className="content">
         <Router>
           <Switch>
