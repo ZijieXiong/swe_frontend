@@ -9,10 +9,10 @@ export default function Home(){
   }
 
   return (
-  
+    <>
+    <h1 id = "title"> 🥞 Pancake Flippers 🥞</h1>
     <div className="content">
 
-      <h1> Pancake Flippers </h1>
       <h1>🤗 Welcome!</h1>
       <button
         onClick={() => navigateToPage('/users')}
@@ -27,6 +27,7 @@ export default function Home(){
         Delivery 
       </button>
     </div>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@
 }
 li {
   list-style-type: none;
+  text-decoration: none;
 
 }
 a{
@@ -18,7 +19,10 @@ nav {
   justify-content: space-around;
   min-height: 10vh;
   align-items: center;
-  background-color: #ff5f6d;
+  background-color: #b07d62;
+  color: #fff;
+  text-decoration: none;
+
 
 
 }
@@ -41,6 +45,18 @@ nav .nav-links a {
 
 }
 /* End of navbar */
+
+/*
+title
+*/
+#title {
+  padding: 20px;
+  color: #536878;
+  background-color: #fec89a;
+  width: 100%;
+  text-align: center;
+  height: 10%;
+}
 
 
 
@@ -97,5 +113,5 @@ nav .nav-links a {
 }
 
 body {
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  background-image: linear-gradient(to right, #fcd5ce, #f9dcc4);
 }

@@ -9,8 +9,7 @@ import './App.css';
 
 function App() {
   return (
-
-    <div className="root">
+    <>
       <div className="navbar">
       <NavBar />
       </div>
@@ -30,7 +29,7 @@ function App() {
           </Switch>
         </Router>
       </div>
-    </div>
+      </>
   );
 }
 
