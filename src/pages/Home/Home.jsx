@@ -26,6 +26,24 @@ export default function Home(){
       >
         Delivery 
       </button>
+      <button 
+        onClick = {() => navigateToPage('/rooms')}
+        className= "page-button"
+      >
+        Sign up
+      </button>
+      <button 
+        onClick = {() => navigateToPage('/rooms')}
+        className= "page-button"
+      >
+        Sign in
+      </button>
+      <button 
+        onClick = {() => navigateToPage('/rooms')}
+        className= "page-button"
+      >
+        Start to order 
+      </button>
     </div>
     </>
   );
