@@ -14,6 +14,7 @@ export default function Home(){
     <div className="content">
 
       <h1>🤗 Welcome!</h1>
+      <img id="pancake0" src="../../images/0.jpg" alt="Pancake 0"></img>
       <button
         onClick={() => navigateToPage('/users')}
         className="page-button"
@@ -38,12 +39,10 @@ export default function Home(){
       >
         Sign in
       </button>
-      <button 
-        onClick = {() => navigateToPage('/rooms')}
-        className= "page-button"
-      >
-        Start to order 
-      </button>
+      <p>Restaurant focused on serving soft, delicate pancakes with butter, syrup, chocolate lava, or your favorite fruits.</p>
+      <img id="pancake0" src="../../images/1.jpg" alt="Pancake 1"></img>
+      <img id="pancake0" src="../../images/2.jpg" alt="Pancake 2"></img>
+      <img id="pancake0" src="../../images/3.jpg" alt="Pancake 3"></img>
     </div>
     </>
   );

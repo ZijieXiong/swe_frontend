@@ -25,6 +25,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: .75;
 }
 nav .logo {
   font-size: 22px;
@@ -50,13 +51,13 @@ nav .nav-links a {
 title
 */
 #title {
-  padding: 20px;
+  padding: 10vw;
   color: #536878;
   background-color: #fec89a;
   width: 100%;
   text-align: center;
   height: 10%;
-  margin-top: 10vh;
+  margin-top: 20vw;
 }
 
 
