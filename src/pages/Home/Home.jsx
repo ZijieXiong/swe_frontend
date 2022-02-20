@@ -16,7 +16,7 @@ export default function Home(){
       <h1>🤗 Welcome!</h1>
       <img id="pancake0" src="../../images/0.jpg" alt="Pancake 0"></img>
       <button
-        onClick={() => navigateToPage('/users')}
+        onClick={() => navigateToPage('/drink_menu')}
         className="page-button"
       >
         Drink Menu
