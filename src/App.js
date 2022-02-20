@@ -28,7 +28,9 @@ function App() {
             <Route exact={true} path={'/drink_menu'}>
               <Drink_Menu />
             </Route>
-           
+            <Route exact={true} path={'/food_menu'}>
+              <Food_Menu />
+            </Route>
             <Route exact={true} path={'/users'}>
               <Users />
             </Route>
