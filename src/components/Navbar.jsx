@@ -13,7 +13,9 @@ function NavBar() {
     return (
         <div>
             <nav>
-                <div className = "logo">Pancakes</div>
+                <div className = "logo">
+                    <Link to ="Home"> Pancakes </Link>
+                    </div>
                 <ul className = "nav-links">
                     <Link to="food_menu" ><li>Food menu </li></Link>
                     <Link to="drink_menu"><li>Drink menu</li></Link>

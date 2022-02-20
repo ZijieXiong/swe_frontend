@@ -5,3 +5,11 @@ body {
 #pancake0 {
     margin-top: 20vh;
 }
+
+.text {
+    text-align: center;
+}
+
+#mainimg {
+    height: 300px;
+}

@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
 import Users from './pages/Users/Users';
 import NavBar from './components/Navbar'
+import Footer from './components/Footer'
 import Food_Menu from './pages/Food_Menu/Food_Menu';
 import './App.css';
 import Drink_Menu from './pages/Drink_Menu/Drink_Menu';
@@ -37,6 +38,7 @@ function App() {
           </Switch>
 
       </div>
+      <Footer />
       </>
   );
 }

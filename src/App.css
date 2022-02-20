@@ -49,13 +49,12 @@ nav .nav-links a {
 
 /*
 title
-*/
+
 #title {
   padding: 10vw;
   color: #536878;
   background-color: #fec89a;
   width: 100%;
-  text-align: center;
   height: 10%;
   margin-top: 20vw;
 }
@@ -73,19 +72,17 @@ title
 .content {
   height: 100vh;
   width: 100%;
-  padding: 0;
+  padding: 15;
   margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 2rem;
 }
 
 .page-button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; 
   border: none;
   color: white;
   padding: 16px 32px;
@@ -113,7 +110,129 @@ title
 .page-button:hover {
   background-color: skyblue;
 }
+*/
+.content {
+  padding-top: 40px;
+  height: 50%;
+  width: 100%;
+  padding: 15;
+  margin: 0;
+  gap: 2rem;
+}
 
 body {
-  background-image: linear-gradient(to right, #fcd5ce, #f9dcc4);
+  background-color: white;
+  /* background-image: linear-gradient(to right, #fcd5ce, #f9dcc4); */
+}
+
+.title {
+  text-align: center;
+  font-family: Monaco;
+  font-weight: bold;
+  text-emphasis: bold;
+
+}
+.secondtitle {
+  text-align: center;
+  font-family: Monaco;
+  
+}
+.space {
+  padding: 15px;
+}
+.blue {
+  padding-top: 15px;
+  background-color: lightblue;
+  width: 600px;
+  height: 50px;
+}
+.blue2 {
+  padding-top: 15px;
+  background-color: lightblue;
+  width: 600px;
+  height: 50px;
+  left: 500px;
+
+}
+.welcomemessage {
+  padding-left: 250px;
+
+}
+
+#move_right {
+  padding-right: 50px;
+}
+
+/*main image */
+
+#mainimg {
+  height: 600px;
+  border-radius: 50%;
+  float: right;
+  width: 550px;
+  position: relative;
+  top: -500px;
+}
+
+/*buttons */
+
+.page-button {
+  background-color: blue; 
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button {
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  border: 1px solid #94A3B8;
+  background-color: #E2E8F0;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.grid {
+  padding-left: 250px;
+  width: 25px;
+  padding-top: 10px;
+  display: grid;
+
+}
+.page-button:hover {
+  background-color: skyblue;
+}
+
+
+/*Slogan */
+.text {
+  padding-top: 125px;
+  padding-left: 300px;
+}
+
+/* Image gallery */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 500px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
 }
