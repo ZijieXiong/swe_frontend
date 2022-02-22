@@ -5,16 +5,16 @@ import axios from 'axios' //to use axios run "npm install axios"  in terminal
 import { useState, useEffect } from 'react';
 
 
-export default function Food_Menu({drinkName}) {
-    const [fooditems, setFoodItems] = useState(undefined)
+export default function Food_Menu({foodName}) {
+    const [foodItems, setFoodItems] = useState([])
     const [error, setError] = useState('')
     
     useEffect(() => {
         axios.get('https://swe-temp.herokuapp.com/food_menu/list')
         .then((res) => {
             if (res.data) {
-                console.log(res)
-                setFoodItems(res.data);
+               const formattedData = Object.values(res.data)
+                 setFoodItems(formattedData);
             }
         })      
        
@@ -24,11 +24,17 @@ export default function Food_Menu({drinkName}) {
         })
     }, [])
     
-    
+   
+      
     return (
         <div>
-<h1>this is food </h1>
+<h1>food menu is coming soon!</h1>
+{foodItems.map((product) => (
+        <p key={product.foodName}>{product.foodName} </p>
+      ))}
            {/* <p>{foodName}</p> */}
         </div>
     )
 }
+
+

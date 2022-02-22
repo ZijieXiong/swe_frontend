@@ -5,31 +5,44 @@ import axios from 'axios' //to use axios run "npm install axios"  in terminal
 import { useState, useEffect } from 'react';
 
 
+
 export default function Drink_Menu({drinkName}) {
     const [drinkitems, setDrinkItems] = useState(undefined)
     const [error, setError] = useState('')
     
     useEffect(() => {
-        fetch('https://swe-temp.herokuapp.com/drink_menu/list',{
-            mode:"no-cors"
-        })
+        axios.get('https://swe-temp.herokuapp.com/drink_menu/list')
         .then((res) => {
-            return res.json()
-            // if (res.data) {
-            //     console.log(res)
-            //     setDrinkItems(res.data);
-            // }
-        }).then(data=>console.log("data", data)).catch((err) => {
-            console.log(err);
-            setError(err.toString());
+            const beverages = Object.entries(res.data.Beverages)
+            const alcoholicBeverages = Object.entries(res.data["Alcoholic Beverages"])
+            
+           const merged =  [...beverages, ...alcoholicBeverages]
+
+           const formatedData = merged.map(item=>{
+
+            return {
+                drinkName : item[0],
+                price: item[1]
+            }
+
+           })
+setDrinkItems(formatedData)
         })
     }, [])
     
     
     return (
         <div>
-<h1>this is drink </h1>
-            {/* <p>{drinkName}</p> */}
+<h1>drink menu is coming soon! </h1>
+{drinkitems && drinkitems.map((item, index) => (
+                       <div key={item.drinkName}>
+                           <p>{item.drinkName} </p>
+                           <p> {item.price} </p>
+                       </div>
+
+                    ))}
         </div>
     )
 }
+
+
