@@ -23,17 +23,27 @@ export default function Food_Menu({foodName}) {
             setError(err.toString());
         })
     }, [])
-    
-   
-      
+
     return (
+        <>
+        <div id = "foodmenu_top">
+
+            <h1> Food menu </h1>
+            <h2> Take a look at what we have to offer! </h2>
+            
+        </div>
+
+
         <div>
-<h1>food menu is coming soon!</h1>
-{foodItems.map((product) => (
+        {foodItems.map((product) => (
         <p key={product.foodName}>{product.foodName} </p>
       ))}
            {/* <p>{foodName}</p> */}
         </div>
+        </>
+
+        
+
     )
 }
 

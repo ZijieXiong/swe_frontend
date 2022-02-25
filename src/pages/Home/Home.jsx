@@ -7,6 +7,7 @@ import image2 from '../../images/1.jpg'
 import image3 from '../../images/2.jpg'
 import image4 from '../../images/3.jpg'
 
+
  
 
 export default function Home(){
@@ -58,8 +59,6 @@ export default function Home(){
 
       <img id = "mainimg" src = {image1} />
 
-
-
       <h3 className = "text"> Restaurant focused on serving soft, delicate, pancakes, with syrup, butter, chocolate lava, or your favorite fruits
       </h3>
 
@@ -72,13 +71,7 @@ export default function Home(){
       <div class="gallery">
           <img src={image4} alt="image3" width="600" height="400" />
       </div>
-
-
-
-      
-
-
-
+    
 
 
     </div>

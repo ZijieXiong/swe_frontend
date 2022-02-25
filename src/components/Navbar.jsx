@@ -14,7 +14,7 @@ function NavBar() {
         <div>
             <nav>
                 <div className = "logo">
-                    <Link to ="Home"> Pancakes </Link>
+                    <Link to ="/"> Pancakes </Link>
                     </div>
                 <ul className = "nav-links">
                     <Link to="food_menu" ><li>Food menu </li></Link>

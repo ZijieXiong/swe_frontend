@@ -236,3 +236,31 @@ div.gallery img {
   width: 100%;
   height: auto;
 }
+
+/* Footer */
+
+#footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 25;
+}
+
+/* Food menu */
+
+#foodmenu_top {
+  text-align: center;
+  background-color: skyblue;
+}
+
+/* Drink menu */
+#drinkmenu_top {
+  text-align: center;
+  background-color: skyblue; 
+}

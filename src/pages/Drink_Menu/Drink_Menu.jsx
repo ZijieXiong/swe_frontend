@@ -32,9 +32,13 @@ setDrinkItems(formatedData)
     
     
     return (
+        <>
+        <div id = "drinkmenu_top">
+        <h1> Drinks menu </h1>
+        <h1> Take a look at the beverages we offer</h1>
+        </div>
         <div>
-<h1>drink menu is coming soon! </h1>
-{drinkitems && drinkitems.map((item, index) => (
+        {drinkitems && drinkitems.map((item, index) => (
                        <div key={item.drinkName}>
                            <p>{item.drinkName} </p>
                            <p> {item.price} </p>
@@ -42,6 +46,7 @@ setDrinkItems(formatedData)
 
                     ))}
         </div>
+        </>
     )
 }
 
