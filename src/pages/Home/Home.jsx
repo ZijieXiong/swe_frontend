@@ -1,14 +1,10 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import NavBar from '../../components/Navbar'
-import home_page_images from '../../images/images'
 import image1 from '../../images/0.jpg'
 import image2 from '../../images/1.jpg'
 import image3 from '../../images/2.jpg'
 import image4 from '../../images/3.jpg'
 
-
- 
 
 export default function Home(){
   const history = useHistory();
@@ -20,6 +16,8 @@ export default function Home(){
   return (
     <>
     <div className="content">
+      <img id = "mainimg" src = {image1} />
+      <div id="container"></div>
       <h1 className = "title"> Pancakes</h1>
       <h2 className = "secondtitle"> New York </h2> 
 
@@ -56,8 +54,6 @@ export default function Home(){
         Start to order 
       </button>
       </div>
-
-      <img id = "mainimg" src = {image1} />
 
       <h3 className = "text"> Restaurant focused on serving soft, delicate, pancakes, with syrup, butter, chocolate lava, or your favorite fruits
       </h3>
