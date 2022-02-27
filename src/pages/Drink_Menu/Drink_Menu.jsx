@@ -36,6 +36,58 @@ setDrinkItems(formatedData)
         <div id = "drinkmenu_top">
         <h1> Drinks menu </h1>
         <h1> Take a look at the beverages we offer</h1>
+        <section class = "grid_container">
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+            
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Food item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+            
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+
+        </section>
+
         </div>
         <div>
         {drinkitems && drinkitems.map((item, index) => (
