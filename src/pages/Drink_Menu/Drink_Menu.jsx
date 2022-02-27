@@ -54,7 +54,7 @@ setDrinkItems(formatedData)
             </div>
 
             <div className = "fooditems"> 
-                <h1 class = "foodname"> Food item </h1>
+                <h1 class = "foodname"> Drink item </h1>
 
                 <h3 class = "ingredients"> Ingredients: </h3>
 
