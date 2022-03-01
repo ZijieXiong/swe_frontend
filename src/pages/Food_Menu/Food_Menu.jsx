@@ -34,7 +34,7 @@ export default function Food_Menu({foodName}) {
 
         <section class = "grid_container">
             <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
+                <h1 class = "foodname"> Food item </h1>
 
                 <h3 class = "ingredients"> Ingredients: </h3>
 
@@ -42,7 +42,7 @@ export default function Food_Menu({foodName}) {
             </div>
             
             <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
+                <h1 class = "foodname"> Food item </h1>
 
                 <h3 class = "ingredients"> Ingredients: </h3>
 
@@ -58,7 +58,7 @@ export default function Food_Menu({foodName}) {
             </div>
             
             <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
+                <h1 class = "foodname"> Food item </h1>
 
                 <h3 class = "ingredients"> Ingredients: </h3>
 
@@ -66,7 +66,7 @@ export default function Food_Menu({foodName}) {
             </div>
 
             <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
+                <h1 class = "foodname"> Food item </h1>
 
                 <h3 class = "ingredients"> Ingredients: </h3>
 
@@ -74,7 +74,7 @@ export default function Food_Menu({foodName}) {
             </div>
 
             <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
+                <h1 class = "foodname"> Food item </h1>
 
                 <h3 class = "ingredients"> Ingredients: </h3>
 
