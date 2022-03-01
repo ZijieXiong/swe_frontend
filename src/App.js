@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Food_Menu from './pages/Food_Menu/Food_Menu';
 import './App.css';
 import Drink_Menu from './pages/Drink_Menu/Drink_Menu';
+import LogIn from './pages/LogIn/LogIn';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route exact={true} path={'/food_menu'}>
               <Food_Menu />
             </Route>
+            
             <Route exact={true} path={'/users'}>
               <Users />
             </Route>
@@ -39,6 +41,9 @@ function App() {
 
       </div>
       <Footer />
+      <Route exact={true} path={'/log_in'}>
+              <LogIn />
+            </Route>
       </>
   );
 }

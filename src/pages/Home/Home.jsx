@@ -34,17 +34,17 @@ export default function Home(){
 
       <div className = "grid">
       <button
-        onClick={() => navigateToPage('/drink_menu')}
+        onClick={() => navigateToPage('/logIn')}
         className="page-button"
       >
-        Drink Menu
+        Log In
       </button>
 
       <button
         onClick={() => navigateToPage('/food_menu')}
         className="page-button"
       >
-        Food Menu
+        Register
       </button>
 
       <button
