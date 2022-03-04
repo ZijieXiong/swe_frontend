@@ -10,6 +10,7 @@ import Food_Menu from './pages/Food_Menu/Food_Menu';
 import './App.css';
 import Drink_Menu from './pages/Drink_Menu/Drink_Menu';
 import LogIn from './pages/LogIn/LogIn';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -33,7 +34,9 @@ function App() {
             <Route exact={true} path={'/food_menu'}>
               <Food_Menu />
             </Route>
-            
+            <Route exact={true} path = {'/About'}>
+              <About />
+            </Route>
             <Route exact={true} path={'/users'}>
               <Users />
             </Route>

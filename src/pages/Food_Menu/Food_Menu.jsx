@@ -32,6 +32,7 @@ export default function Food_Menu({foodName}) {
             <h2> Take a look at what we have to offer! </h2>
         </div>
 
+        <h1> Appetizers</h1>
         <section class = "grid_container">
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Food item </h1>
@@ -81,6 +82,63 @@ export default function Food_Menu({foodName}) {
                 <p class = "price">  Price: </p>
             </div>
             </section>
+
+        <h1> Main courses </h1>
+        <section class = "grid_container">
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Food item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+            
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Food item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Food item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+            
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Food item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Food item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Food item </h1>
+
+                <h3 class = "ingredients"> Ingredients: </h3>
+
+                <p class = "price">  Price: </p>
+            </div>
+            </section>
+
+
+        <h1> Sides</h1>
+
+
+
 
 
         <div>

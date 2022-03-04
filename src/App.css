@@ -301,4 +301,10 @@ div.gallery img {
   text-align: center;
   background-color: skyblue; 
 }
+ 
+/* About section */
+.About_section {
+  text-align:center;
+  top: 6px;
 
+}
