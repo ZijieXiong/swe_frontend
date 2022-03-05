@@ -53,7 +53,7 @@ export default function Home(){
       </button>
       </div>
 
-      <h3 className = "text"> Restaurant focused on serving soft, delicate, pancakes, with syrup, butter, chocolate lava, or your favorite fruits
+      <h3 className = "text"> Restaurant focused on serving soft, delicate pancakes, with syrup, butter, chocolate lava, or your favorite fruits.
       </h3>
 
       <div class="gallery">
