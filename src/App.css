@@ -59,11 +59,11 @@ nav .nav-links a:hover {
 #container:after{
   content: '';
   position: absolute;
-  right: -10vw;
-  top: -10vw;
+  right: -15vh;
+  top: -15vh;
   border-radius: 100%;
-  width: 60vw; 
-  height: 60vw;
+  width: 105vh; 
+  height: 105vh;
   box-shadow: 0px 0px 0px 2000px #f7f5f2;
 }
 .content {
@@ -84,13 +84,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 200;
   text-emphasis: bold;
-  font-size: 3vw;
+  font-size: 40px;
 }
 .secondtitle {
   padding-left: 18vw;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 50;
-  font-size: 1.5vw;
+  font-size: 18px;
 }
 .space {
   padding: 15px;
@@ -117,7 +117,7 @@ body {
   padding-left: 9vw;
   padding-top: 5vh;
   font-style: italic;
-  font-size: 2vw;
+  font-size: 25px;
 }
 #move_right {
   padding-left: 3vw;
@@ -129,7 +129,7 @@ body {
   top: 8vh;
   right: 0;
   height: 90vh;
-  width: 80vw;
+  width: 140vh;
   z-index: -2;
 }
 
@@ -175,14 +175,13 @@ body {
 
 /*Slogan */
 .text {
-  padding: 25vh 12vw 8vh;
+  padding: 22vh 12vw 8vh;
   font-weight: 500;
 }
 
 /* Image gallery */
 div.gallery {
   margin: 0 5px 10vh;
-  border: 3px solid #777;
   float: left;
   width: 32vw;
   border-radius: 5px;
