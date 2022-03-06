@@ -49,7 +49,7 @@ export default function Home(){
         onClick={() => navigateToPage('/food_menu')}
         className="page-button-group1"
       >
-        Start to order 
+        Make a Reservation 
       </button>
       </div>
 
