@@ -143,9 +143,17 @@ export default function Food_Menu({foodName}) {
 
         <div>
         {foodItems.map((product) => (
-        <p key={product.foodName}>{product.foodName} </p>
+                   <section class = "grid_container">
+                   <div className = "fooditems"> 
+                       <h1 class = "foodname"> Food item </h1>
+                       <p key={product.foodName}>{product.foodName} </p>
+                       <h3 class = "ingredients"> Ingredients: </h3>
+       
+                       <p class = "price">  Price: </p>
+                   </div>
+                   </section>
       ))}
-           {/* <p>{foodName}</p> */}
+          
         </div>
         </>
 
