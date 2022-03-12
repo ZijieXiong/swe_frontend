@@ -258,6 +258,9 @@ div.gallery img {
 /* About section */
 .About_section {
   text-align:center;
-  top: 6px;
+  padding-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
 
 }
