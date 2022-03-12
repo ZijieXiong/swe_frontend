@@ -36,7 +36,7 @@ function App() {
             <Route exact={true} path={'/food_menu'}>
               <Food_Menu />
             </Route>
-            <Route exact={true} path= {'/order'}>
+            <Route exact={true} path={'/Order'}>
               <Order />
             </Route>
             <Route exact={true} path = {'/About'}>

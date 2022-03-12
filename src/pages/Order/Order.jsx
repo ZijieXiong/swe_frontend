@@ -5,6 +5,9 @@ export default function Order() {
         <>
             <div className = "order_menu" >
                 <p> Testing </p>
+                <p> Order Now! </p>
+                
+                
             </div>
         </>
     )

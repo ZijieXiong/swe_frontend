@@ -140,7 +140,6 @@ export default function Food_Menu({foodName}) {
 
 
 
-
         <div>
         {foodItems.map((product) => (
                    <section class = "grid_container">

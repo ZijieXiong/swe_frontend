@@ -13,7 +13,7 @@ function NavBar() {
                 <ul className = "nav-links">
                     <Link to="food_menu"><li>Food Menu</li></Link>
                     <Link to="drink_menu"><li>Drink Menu</li></Link>
-                    <li><a>Order Now!</a></li>
+                    <Link to="Order"><li>Order</li></Link>
                     <Link to= "About"><li> About Us</li> </Link>
                 </ul>
             </nav>

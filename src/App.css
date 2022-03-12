@@ -254,13 +254,21 @@ div.gallery img {
   text-align: center;
   background-color: skyblue; 
 }
+
+/* Order menu */
+.order_menu {
+  text-align: center;
+}
  
 /* About section */
 .About_section {
-  text-align:center;
   padding-bottom: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  
-
 
 }
+
+.About_Title {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
