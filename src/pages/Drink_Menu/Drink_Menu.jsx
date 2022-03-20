@@ -7,6 +7,20 @@ import { useState, useEffect } from 'react';
 
 
 export default function Drink_Menu({drinkName}) {
+    
+    const [drinkType, setDrinkType] = useState([])
+    useEffect(() => {
+        // adding event listeners on mount here
+        axios.get('https://swe-temp.herokuapp.com/drink_menu/type')
+        .then((res) => {
+            if (res.data) {
+                const formattedData = Object.values(res.data)
+                  setDrinkType(formattedData);
+             }
+        })
+        
+        }, [] );
+
     const [drinkitems, setDrinkItems] = useState(undefined)
     const [error, setError] = useState('')
     
@@ -28,20 +42,31 @@ export default function Drink_Menu({drinkName}) {
            })
 setDrinkItems(formatedData)
         })
-    }, [])
+    }, []);
     
     
     return (
     
         <>
       
+
+
         <div id = "drinkmenu_top">
         <h1> Drinks menu </h1>
         </div>
 
         <h1> Take a look at the beverages we offer</h1>
+
+        <div>
+        {drinkType.map((type) => (
+                   
+                   <h1> <p key={type.typeName}>{type.typeName} </p></h1>
+
+      ))}
+          
+        </div>
     
-        <h1> Juice  </h1> 
+        
         <section class = "grid_container">
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
@@ -154,5 +179,3 @@ setDrinkItems(formatedData)
         </>
     )
 }
-
-
