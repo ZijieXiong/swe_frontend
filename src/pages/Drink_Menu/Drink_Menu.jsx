@@ -27,19 +27,28 @@ export default function Drink_Menu({drinkName}) {
     useEffect(() => {
         axios.get('https://swe-temp.herokuapp.com/drink_menu/list')
         .then((res) => {
-            const beverages = Object.entries(res.data.Beverages)
-            const alcoholicBeverages = Object.entries(res.data["Alcoholic Beverages"])
+
+            //if(res.data) {
+            const beverages = Object.entries(res.data.Alcoholic.Beer)
+
+            console.log(res.data.Alcoholic.Beer)
             
-           const merged =  [...beverages, ...alcoholicBeverages]
+            //const alcoholicBeverages = Object.entries(res.data["Alcoholic Beverages"])
+            
+           //const merged =  [...beverages, ...alcoholicBeverages]
+           // }
+           //const formatedData = merged.map(item=>{ 
+              
+            const formatedData = beverages.map(item=>{
 
-           const formatedData = merged.map(item=>{
 
-            return {
-                drinkName : item[0],
-                price: item[1]
-            }
-
+                return {
+                    drinkName : item[0],
+                    type: item[1],
+                    price: item[2]                 
+                }               
            })
+           
 setDrinkItems(formatedData)
         })
     }, []);
@@ -56,6 +65,19 @@ setDrinkItems(formatedData)
         </div>
 
         <h1> Take a look at the beverages we offer</h1>
+
+        <div>
+        {drinkitems && drinkitems.map((item, val) => (
+                       <div key={item.drinkName}>{item.drinkName}:{val.drinkName}
+                           <p>{val.drinkName} </p>
+                           <p> {val.price} </p>
+                       </div>
+
+                    ))}
+        </div>
+
+
+
 
         <div>
         {drinkType.map((type) => (
