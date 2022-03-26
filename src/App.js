@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Route, Switch} from 'react-router-dom';
 
 import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
@@ -12,7 +12,7 @@ import Drink_Menu from './pages/Drink_Menu/Drink_Menu';
 import LogIn from './pages/LogIn/LogIn';
 import About from './pages/About/About';
 import Order from './pages/Order/Order';
-
+import SignUp from './pages/Sign-up/Sign-up';
 
 function App() {
   return (
@@ -45,13 +45,16 @@ function App() {
             <Route exact={true} path={'/users'}>
               <Users />
             </Route>
+            <Route exact={true} path={'/sign-up'}>
+              <SignUp />
+            </Route>
           </Switch>
 
       </div>
       <Footer />
       <Route exact={true} path={'/log_in'}>
-              <LogIn />
-            </Route>
+        <LogIn />
+      </Route>
       </>
   );
 }
