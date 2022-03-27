@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
@@ -48,13 +48,14 @@ function App() {
             <Route exact={true} path={'/sign-up'}>
               <SignUp />
             </Route>
+            <Route exact={true} path={'/log_in'}>
+              <LogIn />
+            </Route>
           </Switch>
 
       </div>
       <Footer />
-      <Route exact={true} path={'/log_in'}>
-        <LogIn />
-      </Route>
+
       </>
   );
 }

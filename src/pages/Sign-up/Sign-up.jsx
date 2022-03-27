@@ -1,10 +1,11 @@
 import React from "react"
+import './Sign-up.css';
 
-export default function Login() {
+export default function SignUp() {
     return (
         <>
         <div className= "login_main"> 
-            <form action="action_page.php" style="border:1px solid #ccc">
+            <form action="action_page.php">
                 <div class="container">
                     <h1>Sign Up</h1>
                     <p>Please fill in this form to create an account.</p>
@@ -15,7 +16,7 @@ export default function Login() {
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter your email" name="email" required></input>
                     <label for="password"><b>Password</b></label>
-                    <input type="text" placeholder="Enter your password" name="password" required></input>
+                    <input type="password" placeholder="Enter your password" name="password" required></input>
                 </div>
             </form>
         </div>
