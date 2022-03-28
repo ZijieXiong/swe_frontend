@@ -29,9 +29,25 @@ export default function Drink_Menu({drinkName}) {
         .then((res) => {
 
             //if(res.data) {
-            const beverages = Object.entries(res.data.Alcoholic.Beer)
+           // const beverages = Object.value(res.data.Alcoholic.Beer)
+           //const beverages = Object.entries(res.data.Alcoholic.Beer)
+           const beverages = [] 
+           console.log((res.data.Beer))
+           const drink = res.data.Beer.Beer1
+           // do foreach
+           Object.keys(res.data.Beer).forEach(drink=>{
+           console.log((drink, res.data.Beer[drink] ))
 
-            console.log(res.data.Alcoholic.Beer)
+           
+           beverages.push({drinkName: res.data.Beer[drink].drinkName })
+           console.log(beverages)
+        })
+            
+              
+           
+
+            console.log(res.data.Beer.Beer1)
+            console.log(beverages)
             
             //const alcoholicBeverages = Object.entries(res.data["Alcoholic Beverages"])
             
@@ -39,17 +55,20 @@ export default function Drink_Menu({drinkName}) {
            // }
            //const formatedData = merged.map(item=>{ 
               
-            const formatedData = beverages.map(item=>{
+        //     const formatedData = beverages.map(item=>{
+        //         console.log(item)
 
 
-                return {
-                    drinkName : item[0],
-                    type: item[1],
-                    price: item[2]                 
-                }               
-           })
+        //         return {
+        //             drinkName : item[0],
+        //             type: item[1],
+        //             price: item[2]                 
+        //         }               
+        //    })
            
-setDrinkItems(formatedData)
+//setDrinkItems(formatedData)
+setDrinkItems(beverages)
+
         })
     }, []);
     
@@ -67,10 +86,9 @@ setDrinkItems(formatedData)
         <h1> Take a look at the beverages we offer</h1>
 
         <div>
-        {drinkitems && drinkitems.map((item, val) => (
-                       <div key={item.drinkName}>{item.drinkName}:{val.drinkName}
-                           <p>{val.drinkName} </p>
-                           <p> {val.price} </p>
+        {drinkitems && drinkitems.map((item) => (
+                       <div key={item.drinkName}>
+                           <p>{item.drinkName} </p>
                        </div>
 
                     ))}
