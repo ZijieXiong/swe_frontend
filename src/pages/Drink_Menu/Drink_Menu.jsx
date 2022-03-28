@@ -86,19 +86,6 @@ setDrinkItems(beverages)
         <h1> Take a look at the beverages we offer</h1>
 
         <div>
-        {drinkitems && drinkitems.map((item) => (
-                       <div key={item.drinkName}>
-                           <p>{item.drinkName} </p>
-                           <p> {item.price} </p>
-                       </div>
-
-                    ))}
-        </div>
-
-
-
-
-        <div>
         {drinkType.map((type) => (
                    
                    <h1> <p key={type.typeName}>{type.typeName} </p></h1>
@@ -106,10 +93,39 @@ setDrinkItems(beverages)
       ))}
           
         </div>
+        <section class = "grid_container">
+            
+            <div>
+        {drinkitems && drinkitems.map((item) => (
+                       <div key={item.drinkName}>
+                           <div className = "fooditems"> 
+
+                           <h1 class = "foodname"> Drink item </h1>
+                           <p>{item.drinkName} </p>
+                           <h3 class = "ingredients"> Ingredients: </h3>
+                           <p class = "price">  Price: </p>
+                           <p> {item.price} </p>
+                       </div>
+                       </div>
+
+                    ))}
+        </div>
+                
+
+            
+            </section>
+
+
+
+
+
+
     
         
         <section class = "grid_container">
             <div className = "fooditems"> 
+
+            
                 <h1 class = "foodname"> Drink item </h1>
 
                 <h3 class = "ingredients"> Ingredients: </h3>
