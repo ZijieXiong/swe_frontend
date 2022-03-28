@@ -39,7 +39,7 @@ export default function Drink_Menu({drinkName}) {
            console.log((drink, res.data.Beer[drink] ))
 
            
-           beverages.push({drinkName: res.data.Beer[drink].drinkName })
+           beverages.push({drinkName: res.data.Beer[drink].drinkName , price: res.data.Beer[drink].price})
            console.log(beverages)
         })
             
@@ -89,6 +89,7 @@ setDrinkItems(beverages)
         {drinkitems && drinkitems.map((item) => (
                        <div key={item.drinkName}>
                            <p>{item.drinkName} </p>
+                           <p> {item.price} </p>
                        </div>
 
                     ))}
