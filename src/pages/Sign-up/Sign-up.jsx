@@ -4,11 +4,11 @@ import './Sign-up.css';
 export default function SignUp() {
     return (
         <>
-        <div className= "login_main"> 
-            <form action="action_page.php">
-                <div class="container">
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
+        <div> 
+            <form>
+                <div id="sign-up-form">
+                    <div id="title"><h1>Sign up</h1></div>
+                    <p>Welcome, New User!</p>
                     <label for="first-name"><b>First Name</b></label>
                     <input type="text" placeholder="Enter your first name" name="first-name" required></input>
                     <label for="last-name"><b>Last Name</b></label>
@@ -17,6 +17,7 @@ export default function SignUp() {
                     <input type="text" placeholder="Enter your email" name="email" required></input>
                     <label for="password"><b>Password</b></label>
                     <input type="password" placeholder="Enter your password" name="password" required></input>
+                    <input type="submit"></input>
                 </div>
             </form>
         </div>

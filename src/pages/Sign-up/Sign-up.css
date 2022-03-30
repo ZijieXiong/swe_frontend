@@ -1,8 +1,39 @@
 input {
     display: block;
-    font-size:11px;
-    padding:4px 2px;
-    border:solid 1px #aacfe4;
-    width:100%;
-    margin:2px 0 20px 10px;
-}  
+    font-size: 11px;
+    padding: 4px 2px;
+    border: solid 1px #aacfe4;
+    width: 100%;
+    margin: 2px 0 20px 10px;
+}
+
+body {
+    background-color: #f7f5f2;
+}
+
+#sign-up-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    width: 35%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    border-radius: 2vh;
+}
+
+#title {
+    background-color: #70BCE7;
+    border-radius: 2vh 2vh 0 0;
+    font-size: 1.3vh;
+    padding: 2vh;
+    color: white;
+}
+
+p {
+    color: #70BCE7;
+    padding: 2vh;
+    font-weight: 500;
+    font-style: italic;
+    outline: 1px solid gainsboro;
+}
