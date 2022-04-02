@@ -28,7 +28,7 @@ export default function Food_Menu({foodName}) {
         <>
         <div id = "foodmenu_top">
 
-            <h1> Food menu </h1>
+            <h1>  Food menu </h1>
             <h2> Take a look at what we have to offer! </h2>
         </div>
 

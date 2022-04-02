@@ -102,7 +102,6 @@ setDrinkItems(beverages)
 
                            <h1 class = "foodname"> Drink item </h1>
                            <p>{item.drinkName} </p>
-                           <h3 class = "ingredients"> Ingredients: </h3>
                            <p class = "price">  Price: </p>
                            <p> {item.price} </p>
                        </div>
@@ -116,19 +115,24 @@ setDrinkItems(beverages)
             </section>
 
 
-
-
-
-
-    
-        
         <section class = "grid_container">
             <div className = "fooditems"> 
 
             
                 <h1 class = "foodname"> Drink item </h1>
 
-                <h3 class = "ingredients"> Ingredients: </h3>
+                <p class = "price">  Price: </p>
+            </div>
+            
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
 
                 <p class = "price">  Price: </p>
             </div>
@@ -136,39 +140,17 @@ setDrinkItems(beverages)
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
 
-                <h3 class = "ingredients"> Ingredients: </h3>
-
                 <p class = "price">  Price: </p>
             </div>
 
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
 
-                <h3 class = "ingredients"> Ingredients: </h3>
-
-                <p class = "price">  Price: </p>
-            </div>
-            
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <h3 class = "ingredients"> Ingredients: </h3>
-
                 <p class = "price">  Price: </p>
             </div>
 
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
-
-                <h3 class = "ingredients"> Ingredients: </h3>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <h3 class = "ingredients"> Ingredients: </h3>
 
                 <p class = "price">  Price: </p>
             </div>
@@ -178,7 +160,17 @@ setDrinkItems(beverages)
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
 
-                <h3 class = "ingredients"> Ingredients: </h3>
+                <p class = "price">  Price: </p>
+            </div>
+            
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
+
+                <p class = "price">  Price: </p>
+            </div>
+
+            <div className = "fooditems"> 
+                <h1 class = "foodname"> Drink item </h1>
 
                 <p class = "price">  Price: </p>
             </div>
@@ -186,39 +178,17 @@ setDrinkItems(beverages)
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
 
-                <h3 class = "ingredients"> Ingredients: </h3>
-
                 <p class = "price">  Price: </p>
             </div>
 
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
 
-                <h3 class = "ingredients"> Ingredients: </h3>
-
-                <p class = "price">  Price: </p>
-            </div>
-            
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <h3 class = "ingredients"> Ingredients: </h3>
-
                 <p class = "price">  Price: </p>
             </div>
 
             <div className = "fooditems"> 
                 <h1 class = "foodname"> Drink item </h1>
-
-                <h3 class = "ingredients"> Ingredients: </h3>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <h3 class = "ingredients"> Ingredients: </h3>
 
                 <p class = "price">  Price: </p>
             </div>

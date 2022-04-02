@@ -272,3 +272,13 @@ div.gallery img {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+/* About form */
+
+.wrapper {
+  padding: 5px 20px;
+}
+
+.wrapper fieldset {
+  margin: 20px 0;
+}
