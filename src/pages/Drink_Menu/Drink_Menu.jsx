@@ -100,10 +100,9 @@ setDrinkItems(beverages)
                        <div key={item.drinkName}>
                            <div className = "fooditems"> 
 
-                           <h1 class = "foodname"> Drink item </h1>
-                           <p>{item.drinkName} </p>
-                           <p class = "price">  Price: </p>
-                           <p> {item.price} </p>
+                           <h1 class = "foodname"> {item.drinkName}</h1>
+                           <p class = "price">  Price:  {item.price} </p>
+                                                   
                        </div>
                        </div>
 
