@@ -6,6 +6,23 @@ import { useState, useEffect } from 'react';
 
 
 export default function Food_Menu({foodName}) {
+
+    const [foodType, setFoodType] = useState([])
+    useEffect(() => {
+        // adding event listeners on mount here
+        axios.get('https://swe-temp.herokuapp.com/food_menu/type')
+        .then((res) => {
+            if (res.data) {
+                const formattedData = Object.values(res.data)
+                  setFoodType(formattedData);
+             }
+        })
+        
+        }, [] );
+
+
+
+
     const [foodItems, setFoodItems] = useState([])
     const [error, setError] = useState('')
     
@@ -26,11 +43,17 @@ export default function Food_Menu({foodName}) {
 
     return (
         <>
+
+
         <div id = "foodmenu_top">
 
             <h1>  Food menu </h1>
             <h2> Take a look at what we have to offer! </h2>
         </div>
+
+        {foodType.map((type) => (
+                   
+                   <h1> <p key={type.typeName}>{type.typeName} </p></h1>))}
 
         <h1> Appetizers</h1>
         <section class = "grid_container">
