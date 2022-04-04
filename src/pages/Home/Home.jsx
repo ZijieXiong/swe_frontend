@@ -46,7 +46,7 @@ export default function Home(){
         Log in
       </button>
       <button
-        onClick={() => navigateToPage('/food_menu')}
+        onClick={() => navigateToPage('/Reservation')}
         className="page-button-group1"
       >
         Make a Reservation 

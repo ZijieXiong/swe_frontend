@@ -13,6 +13,7 @@ import LogIn from './pages/LogIn/LogIn';
 import About from './pages/About/About';
 import Order from './pages/Order/Order';
 import SignUp from './pages/Sign-up/Sign-up';
+import Reservation from './pages/Reservation/Reservation';
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/log_in'}>
               <LogIn />
+            </Route>
+            <Route exact={true} path={'/Reservation'}>
+              <Reservation />
             </Route>
           </Switch>
 

@@ -1,0 +1,54 @@
+input {
+    display: block;
+    font-size: 1.5vh;
+    padding: 1.5vh;
+    border: solid 2px #70BCE7;
+    width: 90%;
+    margin: 1.5vh 3vh 2vh;
+    border-radius: 1.6vh;
+}
+
+body {
+    background-color: #f7f5f2;
+}
+
+#Reservation-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    width: 35%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    border-radius: 2vh;
+}
+
+#title {
+    background-color: #70BCE7;
+    border-radius: 2vh 2vh 0 0;
+    font-size: 1vh;
+    padding: 2vh 3vh;
+    color: white;
+}
+
+p {
+    color: #70BCE7;
+    padding: 2vh 3vh;
+    font-weight: 500;
+    font-style: italic;
+    outline: 1px solid gainsboro;
+    font-size: 2vh;
+}
+
+#gap {
+    height: 2vh;
+}
+
+label {
+    padding: 0 3vh;
+    font-size: 1.7vh;
+}
+
+#submit {
+    margin: 3vh;
+}
