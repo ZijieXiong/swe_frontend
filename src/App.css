@@ -259,7 +259,18 @@ div.gallery img {
 .order_menu {
   text-align: center;
 }
- 
+
+.Drink_List {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+
+.Food_List {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+
+}
 /* About section */
 .About_section {
   padding-bottom: 15px;
