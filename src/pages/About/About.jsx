@@ -1,6 +1,10 @@
 import React from 'react';
 
 
+function feedback() {
+    alert("Thank you for your feedback! 😊 ");
+}
+
 export default function About() {
     return(
         <>
@@ -13,6 +17,7 @@ export default function About() {
             <p> Locate us!</p>
 
             <p> Google Maps API here</p>
+
 
             <p> Please leave any feedback </p>
 
@@ -32,7 +37,7 @@ export default function About() {
             <input name = "name" />
             </label>
             </fieldset>
-            <button type="submit">Submit</button>
+            <button onclick = {feedback} type="submit">Submit</button>
             </form>
             </div>
 
