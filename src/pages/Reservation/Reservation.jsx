@@ -18,7 +18,7 @@ export default function Reservation() {
                     <p>Please make a reservation!</p>
                     <div id="gap"></div>
                     <label for="first-name"><b>Name</b></label>
-                    <input type="text" placeholder="Enter your first name" name="first-name" required></input>
+                    <input type="text" placeholder="Enter your name" name="first-name" required></input>
                     
                     
                     <label for="time"><b>Time</b></label>
