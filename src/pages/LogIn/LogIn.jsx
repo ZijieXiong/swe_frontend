@@ -1,12 +1,17 @@
-import React from "react"
+import React from 'react'
 
 export default function Login() {
     return (
         <>
+        <div>
+            <form>
+           
             <div className= "login_main"> 
-                <h1> Please login to order online!  </h1>
+               
                 <form> 
+                <div> <h1> Please login to order online!  </h1> </div>
                     <div id ="sign-up-form">
+                    
                         <div id = "title"> <h1> Login </h1> </div>
                         <div id = "gap"></div>
                         <label for="email"><b>Email</b></label>
@@ -15,6 +20,10 @@ export default function Login() {
                 </form>
 
 
+            </div>
+
+            
+            </form>
             </div>
 
         </>

@@ -49,7 +49,7 @@ function App() {
             <Route exact={true} path={'/sign-up'}>
               <SignUp />
             </Route>
-            <Route exact={true} path={'/log_in'}>
+            <Route exact={true} path={'/LogIn'}>
               <LogIn />
             </Route>
             <Route exact={true} path={'/Reservation'}>
