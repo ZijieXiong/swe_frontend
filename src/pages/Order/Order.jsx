@@ -3,7 +3,6 @@ import React from "react";
 function Add_To_Cart() {
     alert("Item successfully added!");
     // cart += item.price;
-
 }
 
 export default function Order() {
@@ -28,11 +27,12 @@ export default function Order() {
                     <li> French fries <button onClick = {Add_To_Cart}> Add </button> </li>
                     <li> Salad  <button onClick = {Add_To_Cart}> Add </button> </li>
 
-
                 <ul> Main Course</ul> 
                     <li> Pancake <button onClick = {Add_To_Cart}> Add </button> </li>
                     <li> Waffle <button onClick = {Add_To_Cart}> Add </button> </li>
             </div> 
+
+            
 
         </>
     )
