@@ -21,7 +21,8 @@ export default function Drink_Menu({drinkName}) {
         
         }, [] );
 
-    const [drinkitems, setDrinkItems] = useState(undefined)
+    const [beer_drinkitems, setBeerDrinkItems] = useState(undefined)
+    const [wine_drinkitems, setWineDrinkItems] = useState(undefined)
     const [error, setError] = useState('')
     
     useEffect(() => {
@@ -31,7 +32,8 @@ export default function Drink_Menu({drinkName}) {
             //if(res.data) {
            // const beverages = Object.value(res.data.Alcoholic.Beer)
            //const beverages = Object.entries(res.data.Alcoholic.Beer)
-           const beverages = [] 
+           const beer_beverages = [] 
+           const wine_beverages = []
           // console.log((res.data.Beer))
            const drink = res.data.Beer.Beer1
            // do foreach
@@ -39,8 +41,16 @@ export default function Drink_Menu({drinkName}) {
           // console.log((drink, res.data.Beer[drink] ))
 
            
-           beverages.push({drinkName: res.data.Beer[drink].drinkName , price: res.data.Beer[drink].price, description: res.data.Beer[drink].description})
-           console.log(beverages)
+           beer_beverages.push({drinkName: res.data.Beer[drink].drinkName , price: res.data.Beer[drink].price, description: res.data.Beer[drink].description})
+           console.log(beer_beverages) })
+
+           Object.keys(res.data.Wine).forEach(drink=>{
+            // console.log((drink, res.data.Beer[drink] ))
+  
+             
+             wine_beverages.push({drinkName: res.data.Wine[drink].drinkName , price: res.data.Wine[drink].price, description: res.data.Wine[drink].description})
+             console.log(wine_beverages)
+
         })
             
               
@@ -67,7 +77,9 @@ export default function Drink_Menu({drinkName}) {
         //    })
            
 //setDrinkItems(formatedData)
-setDrinkItems(beverages)
+setBeerDrinkItems(beer_beverages)
+setWineDrinkItems(wine_beverages)
+
 
         })
     }, []);
@@ -92,10 +104,34 @@ setDrinkItems(beverages)
       ))}
           
         </div>
+        <h1> Beer</h1>
         <section class = "grid_container">
+        
+            <div>
+        {beer_drinkitems && beer_drinkitems.map((item) => (
+                       <div key={item.drinkName}>
+                           <div className = "fooditems"> 
+
+                           <h1 class = "foodname"> {item.drinkName}</h1>
+                           <p class = "price"> Description: {item.description}</p>
+                           <p class = "price">  Price: ${item.price} </p>
+                                                   
+                       </div>
+                       </div>
+
+                    ))}
+        </div>
+                
+
+            
+            </section>
+
+
+            <h1> Wine</h1>
+            <section class = "grid_container">
             
             <div>
-        {drinkitems && drinkitems.map((item) => (
+        {wine_drinkitems && wine_drinkitems.map((item) => (
                        <div key={item.drinkName}>
                            <div className = "fooditems"> 
 
@@ -194,7 +230,7 @@ setDrinkItems(beverages)
         </section>
 
         <div>
-        {drinkitems && drinkitems.map((item, index) => (
+        {beer_drinkitems && beer_drinkitems.map((item, index) => (
                     <section class = "grid_container"> 
                     <div className = "fooditems">
                     <h1 class = "foodname"> Drink item </h1>
