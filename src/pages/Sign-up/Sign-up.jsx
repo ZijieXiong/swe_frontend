@@ -13,6 +13,7 @@ export default function SignUp() {
     const [refresh, setRefresh] = useState(0);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isUserCreated, setIsUserCreated] = useState(false);
     const [newUserName, setNewUserName] = useState('');
     const [password, setNewUserPassword] = useState('');
     const [type, setNewUserType] = useState('');
@@ -35,13 +36,16 @@ export default function SignUp() {
     //   }, [refresh])
 
     const handleCreateUser = () => {
-        axios.post(`${backendurl}/user/register/${newUserName}&${password}&${type}`)
+        axios.post(`${backendurl}user/register/${newUserName}&${password}&${0}`)
         .then(() => {
             setIsModalOpen(false);
             setRefresh(refresh +1 );
+            setIsUserCreated(true);
+
         })
         .catch(error => {
             setError(error);
+            console.log(`${backendurl}user/register/${newUserName}&${password}&${0}`)
             console.log(error);
         })
 
@@ -53,8 +57,12 @@ export default function SignUp() {
 
 
     return (
+
         <>
          <div>
+             {isUserCreated && 
+             <p>"User was created"</p>
+             }
 
 
 <br></br>
@@ -62,26 +70,8 @@ export default function SignUp() {
 <br></br>
 
 
-        {isModalOpen &&
-        <div className="create-modal">
 
-
-         <input
-            className="user-input"
-            placeholder="User Name"
-            value={newUserName}
-            onChange={(e) => setNewUserName(e.target.value)}
-
-          />
-
-<div className="create-actions">
-            <button className="button" onClick={handleCreateUser}>Create New User</button>
-            <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
-          </div>
-          </div>
-
-        }
-
+ 
        
         </div>
 
@@ -90,41 +80,42 @@ export default function SignUp() {
 
 
         <div> 
-            <form>
-                <div id="sign-up-form">
-                    <div id="title"><h1>Sign up</h1></div>
-                    <p>Welcome, New User!</p>
-                    <div id="gap"></div>
-                    <label for="first-name"><b>First Name</b></label>
-                    <input type="text" placeholder="Enter your first name" name="first-name" required></input>
+          
 
+                <div id="sign-up-form">
+                            <div id="title"><h1>Sign up</h1></div>
+                    <p>Welcome, New User!</p>
+                               <div id="gap"></div>
+                    <label htmlFor="first-name"><b>Name</b></label>
+                    <input
+
+value={newUserName}
+onChange={(e) => setNewUserName(e.target.value)}
+                    
+                    type="text" placeholder="Enter your name" name="first-name" required></input>
+                   
                  
 
 
-                    <label for="last-name"><b>Last Name</b></label>
-                    <input type="text" placeholder="Enter your last name" name="last-name" required></input>
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter your email" name="email" required></input>
-                    <label for="password"><b>Password</b></label>
-                    <input type="password" placeholder="Enter your password" name="password" required></input>
-                    <input type="submit" id="submit"></input>
+                    
+                    <label htmlFor="password"><b>Password</b></label>
+                    <input 
+                    
+                    value={password}
+onChange={(e) => setNewUserPassword(e.target.value)}
+                    
+                   
+                    
+                    type="password" placeholder="Enter your password" name="password" required></input>
+                    <button type="submit" onClick={handleCreateUser}> Submit</button>
                 </div>
-           </form>
-        </div>
+          
+          
+           
+      </div>
 
 
 
-
-
-
-
-
-        
-
-
-
-
-  
         </>
     );
 }

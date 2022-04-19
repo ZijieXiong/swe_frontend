@@ -17,14 +17,14 @@ export default function Reservation() {
                     <div id="title"><h1>Welcome</h1></div>
                     <p>Please make a reservation!</p>
                     <div id="gap"></div>
-                    <label for="first-name"><b>Name</b></label>
+                    <label htmlFor="first-name"><b>Name</b></label>
                     <input type="text" placeholder="Enter your name" name="first-name" required></input>
                     
                     
-                    <label for="time"><b>Time</b></label>
+                    <label htmlFor="time"><b>Time</b></label>
                     <input type="time" placeholder="Enter the time" name="time" required></input>
 
-                    <label for="NumberOfPeople"><b>NumberOfPeople</b></label>
+                    <label htmlFor="NumberOfPeople"><b>NumberOfPeople</b></label>
                     <input type="NumberOfPeople" placeholder="Enter the number of people" name="NumberOfPeople" required></input>
 
                     <input type="submit" id="submit"></input>
