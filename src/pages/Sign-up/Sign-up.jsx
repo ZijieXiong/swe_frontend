@@ -14,6 +14,8 @@ export default function SignUp() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [newUserName, setNewUserName] = useState('');
+    const [password, setNewUserPassword] = useState('');
+    const [type, setNewUserType] = useState('');
 
     const history = useHistory();
 
@@ -33,7 +35,7 @@ export default function SignUp() {
     //   }, [refresh])
 
     const handleCreateUser = () => {
-        axios.post(`${backendurl}/create_user/username/${newUserName}`)
+        axios.post(`${backendurl}/user/register/${newUserName}&${password}&${type}`)
         .then(() => {
             setIsModalOpen(false);
             setRefresh(refresh +1 );
@@ -59,23 +61,30 @@ export default function SignUp() {
 <br></br>
 <br></br>
 
-         <p> <input
+
+        {isModalOpen &&
+        <div className="create-modal">
+
+
+         <input
             className="user-input"
             placeholder="User Name"
             value={newUserName}
             onChange={(e) => setNewUserName(e.target.value)}
 
-          /></p>
+          />
 
 <div className="create-actions">
             <button className="button" onClick={handleCreateUser}>Create New User</button>
             <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
           </div>
+          </div>
 
-
+        }
 
        
         </div>
+
 
 
 

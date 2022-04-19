@@ -32,22 +32,22 @@ export default function Drink_Menu({drinkName}) {
            // const beverages = Object.value(res.data.Alcoholic.Beer)
            //const beverages = Object.entries(res.data.Alcoholic.Beer)
            const beverages = [] 
-           console.log((res.data.Beer))
+          // console.log((res.data.Beer))
            const drink = res.data.Beer.Beer1
            // do foreach
            Object.keys(res.data.Beer).forEach(drink=>{
-           console.log((drink, res.data.Beer[drink] ))
+          // console.log((drink, res.data.Beer[drink] ))
 
            
-           beverages.push({drinkName: res.data.Beer[drink].drinkName , price: res.data.Beer[drink].price})
+           beverages.push({drinkName: res.data.Beer[drink].drinkName , price: res.data.Beer[drink].price, description: res.data.Beer[drink].description})
            console.log(beverages)
         })
             
               
            
 
-            console.log(res.data.Beer.Beer1)
-            console.log(beverages)
+           // console.log(res.data.Beer.Beer1)
+          //  console.log(beverages)
             
             //const alcoholicBeverages = Object.entries(res.data["Alcoholic Beverages"])
             
@@ -100,7 +100,8 @@ setDrinkItems(beverages)
                            <div className = "fooditems"> 
 
                            <h1 class = "foodname"> {item.drinkName}</h1>
-                           <p class = "price">  Price:  {item.price} </p>
+                           <p class = "price"> Description: {item.description}</p>
+                           <p class = "price">  Price: ${item.price} </p>
                                                    
                        </div>
                        </div>
