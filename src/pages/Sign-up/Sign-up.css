@@ -70,7 +70,7 @@ label {
     padding: 5px;
   }
   
-  .create-modal {
+.create-modal {
     position: absolute;
     z-index: 1000;
     width: 400px;
@@ -84,4 +84,16 @@ label {
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
+}
+
+#sign-up-submit {
+    width: 8vw;
+    height: 6vh;
+    background-color: #70BCE7;
+    color: white;
+    border-radius: 2vh;
+    border: solid 2px #70BCE7;
+    margin: 1.5vh 3vh 2vh;
+    font-size: 100%;
+    font-weight: bold;
+}

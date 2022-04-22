@@ -36,7 +36,7 @@ export default function SignUp() {
     //   }, [refresh])
 
     const handleCreateUser = () => {
-        axios.post(`${backendurl}user/register/${newUserName}&${password}&${0}`)
+        axios.post(`${backendurl}user/register/${newUserName}&${password}&${1}`)
         .then(() => {
             setIsModalOpen(false);
             setRefresh(refresh +1 );
@@ -45,7 +45,7 @@ export default function SignUp() {
         })
         .catch(error => {
             setError(error);
-            console.log(`${backendurl}user/register/${newUserName}&${password}&${0}`)
+            console.log(`${backendurl}user/register/${newUserName}&${password}&${1}`)
             console.log(error);
         })
 
@@ -86,13 +86,13 @@ export default function SignUp() {
                             <div id="title"><h1>Sign up</h1></div>
                     <p>Welcome, New User!</p>
                                <div id="gap"></div>
-                    <label htmlFor="first-name"><b>Name</b></label>
+                    <label htmlFor="first-name"><b>Username</b></label>
                     <input
 
 value={newUserName}
 onChange={(e) => setNewUserName(e.target.value)}
                     
-                    type="text" placeholder="Enter your name" name="first-name" required></input>
+                    type="text" placeholder="Enter your username" name="first-name" required></input>
                    
                  
 
@@ -107,7 +107,7 @@ onChange={(e) => setNewUserPassword(e.target.value)}
                    
                     
                     type="password" placeholder="Enter your password" name="password" required></input>
-                    <button type="submit" onClick={handleCreateUser}> Submit</button>
+                    <button id="sign-up-submit" type="submit" onClick={handleCreateUser}> Submit</button>
                 </div>
           
           
