@@ -209,6 +209,10 @@ div.gallery img {
 #foodmenu_top {
   text-align: center;
   background-color: skyblue;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
 }
 
 .grid_container {
@@ -253,6 +257,10 @@ div.gallery img {
 #drinkmenu_top {
   text-align: center;
   background-color: skyblue; 
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
 }
 
 /* Order menu */
@@ -286,4 +294,11 @@ div.gallery img {
   top: 10%;
   text-align: center;
 
+}
+
+#Order_Section {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
 }

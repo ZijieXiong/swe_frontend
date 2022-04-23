@@ -93,10 +93,9 @@ setWineDrinkItems(wine_beverages)
 
         <div id = "drinkmenu_top">
         <h1> Drinks menu </h1>
-        </div>
 
         <h1> Take a look at the beverages we offer</h1>
-
+        </div>
         <div>
         {drinkType.map((type) => (
                    <h1> <p key={type.typeName}>{type.typeName} </p></h1>
