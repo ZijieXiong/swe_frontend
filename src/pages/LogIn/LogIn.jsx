@@ -84,7 +84,7 @@ export default function Login() {
     return (
         <> 
             <p> Login </p>
-            {checksubmission ? <div>Successfully logged in</div>: LoginForm}
+            {checksubmission ? <div>Successfully logged in</div>: LoginForm} 
         </>
     );
 }

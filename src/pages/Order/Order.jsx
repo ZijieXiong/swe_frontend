@@ -8,9 +8,9 @@ function Add_To_Cart() {
 export default function Order() {
     return (
         <>
+        <div id = "Order_Section">
             <div className = "order_menu" >
-                <p> Testing </p>
-                <p> Order Now! </p>
+                <h1> Order Now! </h1>
 
                 <i class="icon-shopping-cart"></i> 
                 
@@ -31,6 +31,8 @@ export default function Order() {
                     <li> Pancake <button onClick = {Add_To_Cart}> Add </button> </li>
                     <li> Waffle <button onClick = {Add_To_Cart}> Add </button> </li>
             </div> 
+
+        </div> 
 
             
 

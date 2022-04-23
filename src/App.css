@@ -270,3 +270,20 @@ div.gallery img {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
+
+
+/* About Us page */
+
+#map {
+  width: auto;
+  height: auto;
+
+}
+#placeholder {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+
+}
