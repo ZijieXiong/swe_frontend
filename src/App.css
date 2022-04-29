@@ -102,7 +102,7 @@ body {
   padding-top: 8vh;
   z-index: -1;
   background-color: #70BCE7;
-  width: 25vw;
+  width: 300px;
 }
 .blue2 {
   position: absolute;
@@ -111,7 +111,7 @@ body {
   padding-top: 8vh;
   z-index: -1;
   background-color: #70BCE7;
-  width: 25vw;
+  width: 300px;
 }
 .welcomemessage {
   padding-left: 9vw;
@@ -139,8 +139,8 @@ body {
   border: 3px solid #70BCE7;
   color: white;
   font-style: italic;
-  width: 15vw;
-  height: 8vh;
+  width: 200px;
+  height: 60px;
   font-size: 3vh;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -155,8 +155,8 @@ body {
   border: 3px solid #70BCE7;
   color: #70BCE7;
   font-style: italic;
-  width: 15vw;
-  height: 8vh;
+  width: 200px;
+  height: 60px;
   font-size: 3vh;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -181,9 +181,9 @@ body {
 
 /* Image gallery */
 div.gallery {
-  margin: 0 5px 10vh;
+  margin: 0 .5vw 10vh;
   float: left;
-  width: 32vw;
+  width: 31.5vw;
   border-radius: 5px;
 }
 div.gallery img {
