@@ -6,33 +6,69 @@
     text-align: center;
 }
 
-#About_Title {
+.About_Title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-text {
+    color: black;
+    font-size: large;
+    margin: 5vh;
+    outline: 0;
+    line-height: 5vh;
+    font-style: normal;
+}
+
+#map-section {
+    background-color: #d9eaf3;
+    padding: 3vh;
+}
+
+#map {
+    padding: 5vh;
+}
+
+#feedback-section {
+    padding: 5vh;
 }
   
 /* About form */
 .wrapper {
-    position: absolute;
+    margin-bottom: 1%;
     padding: 3% 0;
-    width: 50%;
-    left: 25%;
+    width: 40%;
+    margin-left: 30%;
 }
 
 .wrapper fieldset {
-    margin: 20px 0;
+    margin: 0;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#feedback-form-title {
+    background-color: #70bce7;
+    color: white;
+    text-align: left;
+    font-style: normal;
+    border-radius: 10px 10px 0 0;
+    font-weight:bold;
 }
 
 #about_submit_button{ 
-    background-color: #f4511e;
+    background-color: #70bce7;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 12px 24px;
     text-align: center;
     font-size: 16px;
-    margin: 4px 2px;
-    opacity: 0.6;
+    margin: 4% 0;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-  }
+    border-radius: 10px;
+    font-weight: bold;
+}

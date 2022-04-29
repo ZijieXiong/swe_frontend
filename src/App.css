@@ -23,6 +23,7 @@ nav {
   width: 100%;
   opacity: .75;
   outline: 1px solid gainsboro;
+  z-index: 1;
 }
 nav .logo {
   font-size: 22px;
