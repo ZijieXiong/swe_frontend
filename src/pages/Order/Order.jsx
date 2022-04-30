@@ -1,8 +1,13 @@
 import React from "react";
 
+
 function Add_To_Cart() {
     alert("Item successfully added!");
     // cart += item.price;
+}
+
+function total() {
+    alert('Thank you for your order!');
 }
 
 export default function Order() {
@@ -32,7 +37,15 @@ export default function Order() {
                     <li> Waffle <button onClick = {Add_To_Cart}> Add </button> </li>
             </div> 
 
+        <p> Total </p>
+        <p> Proceed with items? </p>
+        <button onClick = {total} id = "completed_order"> Order</button>
+
+
+
         </div> 
+
+
 
             
 
