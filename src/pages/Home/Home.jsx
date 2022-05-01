@@ -35,7 +35,7 @@ export default function Home(){
       <div className = "grid">
       <button
         onClick={() => navigateToPage('/sign-up')}
-        className="page-button-group2"
+        className="page-button-group1"
       >
         Sign up
       </button>
@@ -47,7 +47,7 @@ export default function Home(){
       </button>
       <button
         onClick={() => navigateToPage('/Reservation')}
-        className="page-button-group2"
+        className="page-button-group1"
       >
         Make a Reservation 
       </button>
