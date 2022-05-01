@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    id="drinkmenu_top"
+  >
+    <h1>
+       Drinks menu 
+    </h1>
+    <h1>
+       Take a look at the beverages we offer
+    </h1>
+  </div>,
+  <div />,
+  <h1>
+     Beer
+  </h1>,
+  <section
+    class="grid_container"
+  >
+    <div />
+  </section>,
+  <h1>
+     Wine
+  </h1>,
+  <section
+    class="grid_container"
+  >
+    <div />
+  </section>,
+  <section
+    class="grid_container"
+  >
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+  </section>,
+  <h1>
+     Coffee/Tea
+  </h1>,
+  <section
+    class="grid_container"
+  >
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+    <div
+      className="fooditems"
+    >
+      <h1
+        class="foodname"
+      >
+         Drink item 
+      </h1>
+      <p
+        class="price"
+      >
+          Price: 
+      </p>
+    </div>
+  </section>,
+  <div />,
+]
+`;
