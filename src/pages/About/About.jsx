@@ -1,13 +1,39 @@
 import React from 'react';
 import "./About.css";
 
+import axios from 'axios' //to use axios run "npm install axios"  in terminal
+import { useState, useEffect } from 'react';
+
+// 'https://swe-temp.herokuapp.com/review_list/review' 
+
 function feedback() {
     alert("Thank you for your feedback! 😊 ");
 }
 
-export default function About() {
+export default function About({customerReview}) {
+    const [review, setReview] = useState([])
+    useEffect(() => {
+        // adding event listeners on mount here
+        axios.get('https://swe-temp.herokuapp.com/review_list/review' )
+        .then((res) => {
+            if (res.data) {
+                const formattedData = Object.values(res.data)
+                setReview(formattedData);
+                console.log(res.data);
+             }
+        })
+        
+        }, [] );
+
+
+
+
+
     return(
         <>
+        
+       
+
         <div id = "About_section">
             <h1 class = "About_Title"> About Us </h1>
             <p class="about-text">The idea was born with the interests of 5 intellectual students at NYU Tandon. <br/>We serve to provide the best quality food and service to our customers.</p>
@@ -24,13 +50,10 @@ export default function About() {
                     <fieldset>
                         <p id="feedback-form-title">Feedback Form</p>
                         <label>
-                        <p>First Name</p>
+                        <p>Name</p>
                         <input name="name" />
                         </label>
-                        <label>
-                        <p>Last Name</p>
-                        <input name = "name" />
-                        </label>
+                       
                         <label>
                         <p>Feedback</p>
                         <input name = "name" />
@@ -41,6 +64,19 @@ export default function About() {
                 </div>
             </div>
         </div>
+
+        <div id = "comments-section">
+        <h1 class="About_Title">Reviews</h1>
+        <div className="wrapper2">
+        { review.map((type) => (
+                   
+                   <h1> <p key={type.review}>{type.review} </p></h1>
+                  
+                   ))}
+
+
+                   </div>
+                   </div>
   
         </>
 
