@@ -97,151 +97,50 @@ setWineDrinkItems(wine_beverages)
         <h1> Take a look at the beverages we offer</h1>
         </div>
         <div>
-        {drinkType.map((type) => (
-                   <h1> <p key={type.typeName}>{type.typeName} </p></h1>
+        {drinkType.map((type) => {
 
-      ))}
+            let drinkItems;
+
+            switch (type.typeName) { 
+                case "Beer": drinkItems = beer_drinkitems
+
+
+                break;
+
+                case "Wine": drinkItems = wine_drinkitems
+
+                break;
+
+            }
+           return (
+              
+            <div>
+                <h1> <p key={type.typeName}><h1>{type.typeName}</h1> </p></h1>
+                <div>
+                <section class = "grid_container">
+        {drinkItems && drinkItems.map((item) => (
+                       <div key={item.drinkName}>
+                           <div className = "fooditems"> 
+
+                           <h1 class = "foodname"> {item.drinkName}</h1>
+                           <p class = "price"> Description: {item.description}</p>
+                           <p class = "price">  Price: ${item.price} </p>
+                                                   
+                       </div>
+                       </div>
+
+                    ))}
+                    </section>
+        </div>
+            </div>
+             )
+              
+
+        })}
           
         </div>
-        <h1> Beer</h1>
-        <section class = "grid_container">
         
-            <div>
-        {beer_drinkitems && beer_drinkitems.map((item) => (
-                       <div key={item.drinkName}>
-                           <div className = "fooditems"> 
-
-                           <h1 class = "foodname"> {item.drinkName}</h1>
-                           <p class = "price"> Description: {item.description}</p>
-                           <p class = "price">  Price: ${item.price} </p>
-                                                   
-                       </div>
-                       </div>
-
-                    ))}
-        </div>
-                
-
-            
-            </section>
-
-
-            <h1> Wine</h1>
-            <section class = "grid_container">
-            
-            <div>
-        {wine_drinkitems && wine_drinkitems.map((item) => (
-                       <div key={item.drinkName}>
-                           <div className = "fooditems"> 
-
-                           <h1 class = "foodname"> {item.drinkName}</h1>
-                           <p class = "price"> Description: {item.description}</p>
-                           <p class = "price">  Price: ${item.price} </p>
-                                                   
-                       </div>
-                       </div>
-
-                    ))}
-        </div>
-                
-
-            
-            </section>
-
-
-        <section class = "grid_container">
-            <div className = "fooditems"> 
-
-            
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-            
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-
-                <p class = "price">  Price: </p>
-            </div>
-            
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-        </section>
-        <h1> Coffee/Tea</h1>
-        <section class = "grid_container">
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-            
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-            
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-
-            <div className = "fooditems"> 
-                <h1 class = "foodname"> Drink item </h1>
-
-                <p class = "price">  Price: </p>
-            </div>
-        </section>
-
-        <div>
-        {beer_drinkitems && beer_drinkitems.map((item, index) => (
-                    <section class = "grid_container"> 
-                    <div className = "fooditems">
-                    <h1 class = "foodname"> Drink item </h1>
-                       <div key={item.drinkName}>
-                           <p> {item.drinkName} </p>
-                           <p> Price: {item.price} </p>
-                       </div>
-                    </div>
-                    </section>
-
-                    ))}
-        </div>
+     
         </>
     )
 }

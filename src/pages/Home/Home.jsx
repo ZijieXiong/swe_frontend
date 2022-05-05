@@ -56,13 +56,13 @@ export default function Home(){
       <h3 className = "text"> Restaurant focused on serving soft, delicate pancakes, with syrup, butter, chocolate lava, or your favorite fruits.
       </h3>
 
-      <div class="gallery">
+      <div className="gallery">
           <img src={image2} alt="image1" width="600" height="400" />
       </div>
-      <div class="gallery">
+      <div className="gallery">
           <img src={image3} alt="image2" width="600" height="400" />
       </div>
-      <div class="gallery">
+      <div className="gallery">
           <img src={image4} alt="image3" width="600" height="400" />
       </div>
     
