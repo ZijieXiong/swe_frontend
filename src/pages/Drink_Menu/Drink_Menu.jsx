@@ -89,8 +89,6 @@ setWineDrinkItems(wine_beverages)
     
         <>
       
-
-
         <div id = "drinkmenu_top">
         <h1> Drinks menu </h1>
 
@@ -102,20 +100,19 @@ setWineDrinkItems(wine_beverages)
             let drinkItems;
 
             switch (type.typeName) { 
-                case "Beer": drinkItems = beer_drinkitems
+                case "Beer": 
+                    drinkItems = beer_drinkitems
+                    break;
 
-
-                break;
-
-                case "Wine": drinkItems = wine_drinkitems
-
-                break;
+                case "Wine": 
+                    drinkItems = wine_drinkitems
+                    break;
 
             }
            return (
               
             <div>
-                <h1> <p key={type.typeName}><h1>{type.typeName}</h1> </p></h1>
+                <p  key={type.typeName}> {type.typeName} </p>
                 <div>
                 <section class = "grid_container">
         {drinkItems && drinkItems.map((item) => (
