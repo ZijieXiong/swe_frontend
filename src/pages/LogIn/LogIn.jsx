@@ -1,90 +1,102 @@
-import React, {useState} from "react";
-import ReactDom from "react-dom";
+import React, {useEffect, useState} from "react";
 import "./Login.css";
+
+import {useHistory} from 'react-router-dom';
+import {backendurl} from '../../config';
 
 export default function Login() {
 
-    //States 
-    const [errormessage, seterrormessage] = useState({});
-    const [checksubmission, setchecksubmission] = useState(false);
+    const [users, setUsers] = useState(undefined);
+    const [error, setError] = useState(undefined);
 
-    //Temp database 
-    const database  = [
-        {
-            username: 'user1',
-            password: 'password1'
-        },
-        {
-            username: 'user2',
-            password: 'password2'
-        }
-    ];
+    const [refresh, setRefresh] = useState(0);
 
-    const errors = {
-        user: "invalid username",
-        passwd: "invalid password"
-    };
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLogedIn, setLogedIn] = useState(false);
+    const [UserName, setUserName] = useState('');
+    const [password, setUserPassword] = useState('');
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const history = useHistory();
 
-        var {user, passwd} = document.forms[0]; 
+    const handleLogIn = () => {
+        axios.post(`${backendurl}login/${UserName}&${password}`)
+        .then(() => {
+            setIsModalOpen(false);
+            setRefresh(refresh +1 );
+            setLogedIn(true);
 
-        const userInfo = database.find((user) => user.username === user.value);
-
-        if (userInfo) {
-            if(userInfo.password != passwd.value) {
-                displayErrorMessage({name: "pass", message: errors.pass});
-
-            }
-
-            else {
-                setchecksubmission(true);
-            }
-        }
-        else {
-            seterrormessage({name: 'user', message: errors.user});
-        }
-    };
-
-    const displayErrorMessage = (name) => 
-    name === errormessage.name && ( 
-        <div className = "error"> {errormessage.message} 
-        </div>
-    );
-
-    const LoginForm = (
-        <div className= "login_main"> 
-                <form onSubmit = {handleSubmit}>
-                    <div id ="sign-up-form">
-                        <div id = "title"> <h1> Login </h1> </div>
-                        <div id = "gap"></div>
-                        <label> Email </label>
-                        <input type = "text" name = "uname" required />
-
-                        {displayErrorMessage("uname")}
-
-                        <label>Password </label>
-                        <input type = "password" name = "pass" required />
-                        {displayErrorMessage("pass")}
-                    
-                    <div className = "button-container">
-                        <input type = "submit" />
-                    </div>
-                    </div>
-                </form>
+        })
+        .catch(error => {
+            setError(error);
+            console.log(`${backendurl}login/${UserName}&${password}`)
+            console.log(error);
+        })
 
 
-            </div>
+    }
 
-
-    );
-
-    
     return (
-        <> 
-            <p> Login </p>
-            {checksubmission ? <div>Successfully logged in</div>: LoginForm} 
+
+        <>
+      
+        
+         <div>
+             {isLogedIn && 
+             <p id = "loged-in">"Successfully loged in"</p>
+             }
+
+
+<br></br>
+<br></br>
+<br></br>
+
+
+
+ 
+       
+        </div>
+
+
+
+
+
+        <div> 
+          
+
+                <div id="sign-up-form">
+                            <div id="title"><h1>Log in</h1></div>
+                    <p>Welcome, User!</p>
+                               <div id="gap"></div>
+                    <label htmlFor="first-name"><b>Username</b></label>
+                    <input
+
+value={UserName}
+onChange={(e) => setUserName(e.target.value)}
+                    
+                    type="text" placeholder="Enter your username" name="first-name" required></input>
+                   
+                 
+
+
+                    
+                    <label htmlFor="password"><b>Password</b></label>
+                    <input 
+                    
+                    value={password}
+onChange={(e) => setPassword(e.target.value)}
+                    
+                   
+                    
+                    type="password" placeholder="Enter your password" name="password" required></input>
+                    <button id="sign-up-submit" type="submit" onClick={handleLogIn}> Submit</button>
+                </div>
+          
+          
+           
+      </div>
+
+
+
         </>
     );
 }
