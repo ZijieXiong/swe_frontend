@@ -60,6 +60,7 @@ export default function Food_Menu({foodName}) {
     }, [])
 
     return (
+
         <>
 
         <div id = "foodmenu_top">
@@ -84,12 +85,13 @@ export default function Food_Menu({foodName}) {
 		 foodItems = des_fooditems
 		 break;
 	   }
+
 	return (
         
-	<div>
+	    <div>
            <p key={type.typeName}> {type.typeName} </p>
-	   <div>
-	   <section class = "grid_container">
+	        <div>
+	        <section class = "grid_container">
 	{foodItems && foodItems.map((item) => (
 		<div key={item.foodName}>
 		   <div className = "fooditems">
@@ -103,12 +105,11 @@ export default function Food_Menu({foodName}) {
 
         	))}
 		</section>
-	</div>
-	   </div>
-	    )
-	</div>
-	})}
+    </div>
+	    </div>
+    )
+    })}
+    </div>
+    </>
     )
 }
-
-
