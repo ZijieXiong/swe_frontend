@@ -70,7 +70,7 @@ export default function About({customerReview}) {
         <div className="wrapper2">
         { review.map((type) => (
                    
-                   <h1> <p key={type.review}>{type.review} </p></h1>
+                   <p >{type.review} </p>
                   
                    ))}
 
