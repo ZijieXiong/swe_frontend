@@ -43,7 +43,7 @@ export default function Login() {
         
          <div>
              {isLogedIn && 
-             <p id = "loged-in">"Successfully loged in"</p>
+             <p id = "user-signed-in">"Successfully loged in"</p>
              }
 
 
