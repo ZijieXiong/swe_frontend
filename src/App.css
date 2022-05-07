@@ -207,23 +207,51 @@ div.gallery img {
 
 /* Food menu */
 
+.food_menu {
+  text-align: center; 
+
+
+}
+
+.extra_space {
+  padding-bottom: 60px;
+
+}
+
+.Title { 
+  text-align: center;
+
+}
+
+#foodmenu_top {
+  text-align: center;
+  background-color: skyblue;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
+}
+
 .grid_container {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: white;
   padding-left: 50px;
+  padding-bottom: 50px;
 }
+
 
 .fooditems {
-  border-radius: 35px;
-  background-color: red;
-  background-image: linear-gradient(white, skyblue);
+  border-radius: 50px;
+  background-image: linear-gradient(gray, skyblue);
   width: 65%;
   padding-bottom: 60px;
+
 }
 
-.foodname  {
+.foodName  {
   text-align: center;
+  color:  #333333;
   padding: 15px;
 }
 
@@ -232,11 +260,7 @@ div.gallery img {
   color: white;
 }
 
-.price {
-  padding: 10px;
-  color: white;
 
-}
 
 /* Drink menu */
 #drinkmenu_top {
@@ -274,13 +298,49 @@ div.gallery img {
   display: inline-block;
   font-size: 16px;
 }
+ 
+/* Food + Drink */
+.fix_type {
+
+  opacity: 0.5;
+  font-size: 35px;
+  width: auto;
+  color: black;
+  padding-bottom: 15px;
+
+}
+
+.description {
+  color: white; 
+  padding: 5px; 
+}
+
+.price {
+  padding: 10px;
+  color: white;
+
+}
 
 
+.shopping_cart {
+  margin-top: 15px;
+  border-radius: 75%;
+  padding-bottom: 15px;
+  width: 75px;
+  height:30px;
+  background-color: lightgreen;
+}
+
+.shoppingcartimg {
+  height: auto;
+  width: auto;
+}
 /* About Us page */
 
 #map {
   width: auto;
   height: auto;
+
 
 }
 #placeholder {
@@ -297,4 +357,8 @@ div.gallery img {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   top: 10%;
+}
+
+#receipt {
+  background-color: lightblue;
 }

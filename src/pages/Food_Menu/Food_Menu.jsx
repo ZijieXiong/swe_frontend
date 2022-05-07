@@ -3,7 +3,7 @@ import React from 'react'
 //Utilizing foodmenu_css 
 import axios from 'axios' //to use axios run "npm install axios"  in terminal
 import { useState, useEffect } from 'react';
-
+import shoppingcart from '../../images/shopping-cart.png';
 
 
 export default function Food_Menu({foodName}) {
@@ -24,6 +24,7 @@ export default function Food_Menu({foodName}) {
     const[app_fooditems, setAppFoodItems] = useState(undefined)
     const[ent_fooditems, setEntFoodItems] = useState(undefined)
     const[des_fooditems, setDesFoodItems] = useState(undefined)
+    const[error, setError] = useState('')
 
     useEffect(() => {
         axios.get('https://swe-temp.herokuapp.com/food_menu/list')
@@ -32,10 +33,11 @@ export default function Food_Menu({foodName}) {
             //if(res.data) {
            // const beverages = Object.value(res.data.Alcoholic.Beer)
            //const beverages = Object.entries(res.data.Alcoholic.Beer)
-           const app_food = []
+       const app_food = []
 	   const ent_food = []
 	   const des_food = []
            //console.log((res.data.Beer))
+           const food = res.data.Appetizer
            // do foreach
            Object.keys(res.data.Appetizer).forEach(food=>{
            app_food.push({foodName: res.data.Appetizer[food].foodName, price: res.data.Appetizer[food].price, description: res.data.Appetizer[food].description})
@@ -58,17 +60,19 @@ export default function Food_Menu({foodName}) {
     }, [])
 
     return (
+    <>
 
-        <>
 
-	<div>
+	<div class = "food_menu">
+        <div class ="extra_space"></div>
+
         {foodType.map((type) => {
-	   
+
 	   let foodItems;
 	   
 	   switch (type.typeName) {
 	      case "Appetizer":
-		 foodItems = app_fooditems
+		 foodItems = app_fooditems 
 	         break;
 
 	      case "Entree":
@@ -82,27 +86,41 @@ export default function Food_Menu({foodName}) {
 
 	return (
         
-	    <div>
-           <p key={type.typeName}> {type.typeName} </p>
-	        <div>
+	    <div> 
+           <div class ="fix_type">
+           <p class = "fix_type" key={type.typeName}> {type.typeName} 🍽️ </p>
+           </div> 
+    
+
+
+	        <div> 
+
 	        <section class = "grid_container">
 	{foodItems && foodItems.map((item) => (
 		<div key={item.foodName}>
 		   <div className = "fooditems">
 
-		   <h1 class = "foodName"> {item.drinkName}</h1>
-		   <p class = "price"> Description: {item.description}</p>
+
+		   <h1 class = "foodName"> {item.foodName}</h1>
+		   <p class = "description"> Description: {item.description}</p>
 		   <p class = "price"> Price: ${item.price} </p>
+           <button class = "shopping_cart"> 
+           <img src= {shoppingcart} alt= "shopping cart" class = "shoppingcartimg"></img>
+
+            </button>  
+
+
 
 		</div>
 		</div>
 
         	))}
 		</section>
-    </div>
+            </div>
 	    </div>
     )
     })}
+
     </div>
     </>
     )

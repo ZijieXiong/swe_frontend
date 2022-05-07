@@ -3,6 +3,10 @@ import React from 'react'
 //Utilizing foodmenu_css 
 import axios from 'axios' //to use axios run "npm install axios"  in terminal
 import { useState, useEffect } from 'react';
+import shoppingcart from '../../images/shopping-cart.png';
+
+
+
 
 
 
@@ -47,7 +51,7 @@ export default function Drink_Menu({drinkName}) {
            Object.keys(res.data.Wine).forEach(drink=>{
             // console.log((drink, res.data.Beer[drink] ))
   
-             
+
              wine_beverages.push({drinkName: res.data.Wine[drink].drinkName , price: res.data.Wine[drink].price, description: res.data.Wine[drink].description})
              console.log(wine_beverages)
 
@@ -88,7 +92,9 @@ setWineDrinkItems(wine_beverages)
     return (
     
         <>
-        <div>
+        <div class = "food_menu">
+        <div class= "extra_space">
+        </div>
         {drinkType.map((type) => {
 
             let drinkItems;
@@ -104,9 +110,9 @@ setWineDrinkItems(wine_beverages)
 
             }
            return (
-              
             <div>
-                <p  key={type.typeName}> {type.typeName} </p>
+                <div class = "fix_type" key={type.typeName}> {type.typeName} </div>
+
                 <div>
                 <section class = "grid_container">
         {drinkItems && drinkItems.map((item) => (
@@ -114,9 +120,11 @@ setWineDrinkItems(wine_beverages)
                            <div className = "fooditems"> 
 
                            <h1 class = "foodname"> {item.drinkName}</h1>
-                           <p class = "price"> Description: {item.description}</p>
+                           <p class = "description"> Description: {item.description}</p>
                            <p class = "price">  Price: ${item.price} </p>
-                                                   
+                           <button class = "shopping_cart"> 
+                           <img src= {shoppingcart} alt= "shopping cart" class = "shoppingcartimg"></img>
+                           </button>              
                        </div>
                        </div>
 
