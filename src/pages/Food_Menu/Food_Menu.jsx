@@ -24,7 +24,6 @@ export default function Food_Menu({foodName}) {
     const[app_fooditems, setAppFoodItems] = useState(undefined)
     const[ent_fooditems, setEntFoodItems] = useState(undefined)
     const[des_fooditems, setDesFoodItems] = useState(undefined)
-    const[error, setError] = useState('')
 
     useEffect(() => {
         axios.get('https://swe-temp.herokuapp.com/food_menu/list')
@@ -37,7 +36,6 @@ export default function Food_Menu({foodName}) {
 	   const ent_food = []
 	   const des_food = []
            //console.log((res.data.Beer))
-           const food = res.data.Appetizer
            // do foreach
            Object.keys(res.data.Appetizer).forEach(food=>{
            app_food.push({foodName: res.data.Appetizer[food].foodName, price: res.data.Appetizer[food].price, description: res.data.Appetizer[food].description})
@@ -63,10 +61,6 @@ export default function Food_Menu({foodName}) {
 
         <>
 
-        <div id = "foodmenu_top">
-	<h1>  Food menu </h1>
-        </div>
-	
 	<div>
         {foodType.map((type) => {
 	   
