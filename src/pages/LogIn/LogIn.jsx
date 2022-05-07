@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./Login.css";
+import axios from 'axios';
 
 import {useHistory} from 'react-router-dom';
 import {backendurl} from '../../config';
@@ -14,7 +15,7 @@ export default function Login() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLogedIn, setLogedIn] = useState(false);
     const [UserName, setUserName] = useState('');
-    const [password, setUserPassword] = useState('');
+    const [password, setPassword] = useState('');
 
     const history = useHistory();
 
