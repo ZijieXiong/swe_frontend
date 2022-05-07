@@ -16,7 +16,6 @@
   ],
   "env": {
     "production": {
-      "presets": ["react-optimize"]
     }
   }
 }
