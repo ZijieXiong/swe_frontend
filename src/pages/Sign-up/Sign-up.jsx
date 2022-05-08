@@ -56,12 +56,18 @@ export default function SignUp() {
     return (
 
         <>
-      
+     
         
          <div>
-             {isUserCreated && 
+             {
+             isUserCreated &&
              <p id = "user-created">"User was created"</p>
+           
              }
+
+             
+
+            
 
 
 <br></br>

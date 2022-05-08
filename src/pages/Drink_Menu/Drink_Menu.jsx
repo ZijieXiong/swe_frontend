@@ -92,8 +92,8 @@ setWineDrinkItems(wine_beverages)
     return (
     
         <>
-        <div class = "food_menu">
-        <div class= "extra_space">
+        <div className = "food_menu">
+        <div className = "extra_space">
         </div>
         {drinkType.map((type) => {
 
@@ -111,7 +111,7 @@ setWineDrinkItems(wine_beverages)
             }
            return (
             <div>
-                <div class = "fix_type" key={type.typeName}> {type.typeName} </div>
+                <div className = "fix_type" key={type.typeName}> {type.typeName} </div>
 
                 <div>
                 <section class = "grid_container">
@@ -119,10 +119,10 @@ setWineDrinkItems(wine_beverages)
                        <div key={item.drinkName}>
                            <div className = "fooditems"> 
 
-                           <h1 class = "foodname"> {item.drinkName}</h1>
-                           <p class = "description"> Description: {item.description}</p>
-                           <p class = "price">  Price: ${item.price} </p>
-                           <button class = "shopping_cart"> 
+                           <h1 className = "foodname"> {item.drinkName}</h1>
+                           <p className = "description"> Description: {item.description}</p>
+                           <p className = "price">  Price: ${item.price} </p>
+                           <button className = "shopping_cart"> 
                            <img src= {shoppingcart} alt= "shopping cart" class = "shoppingcartimg"></img>
                            </button>              
                        </div>
