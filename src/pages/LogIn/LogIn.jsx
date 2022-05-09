@@ -21,11 +21,13 @@ export default function Login() {
 
     const handleLogIn = () => {
         axios.post(`${backendurl}login/${UserName}&${password}`)
-        .then(() => {
-            setIsModalOpen(false);
-            setRefresh(refresh +1 );
-            setLogedIn(true);
-
+        .then((res) => {
+            console.log(res.data)
+            if (res.data!==-1) {
+                setIsModalOpen(true);
+                setRefresh(refresh +1 );
+                setLogedIn(true);
+            }
         })
         .catch(error => {
             setError(error);
