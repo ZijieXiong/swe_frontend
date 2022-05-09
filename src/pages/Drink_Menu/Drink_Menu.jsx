@@ -111,7 +111,7 @@ setWineDrinkItems(wine_beverages)
             }
            return (
             <div>
-                <div className = "fix_type" key={type.typeName}> {type.typeName} </div>
+                <div className = "fix_type"  key={type.typeName}> {type.typeName} </div>
 
                 <div>
                 <section class = "grid_container">

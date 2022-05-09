@@ -40,22 +40,19 @@ export default function Login() {
 
         <>
       
+      
+
+         
+             <div>
+                
+            {isLogedIn &&
+            <p id = "user-signed-in">The user is logged in. </p>
+              }  </div>
+             
+<br></br>
+<br></br>
+<br></br>      
         
-         <div>
-             {isLogedIn && 
-             <p id = "user-signed-in">"Successfully loged in"</p>
-             }
-
-
-<br></br>
-<br></br>
-<br></br>
-
-
-
- 
-       
-        </div>
 
 
 

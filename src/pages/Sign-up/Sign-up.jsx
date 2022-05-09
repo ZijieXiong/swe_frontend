@@ -21,6 +21,9 @@ export default function SignUp() {
     const history = useHistory();
 
 
+   
+
+
     //we can do this if we have an end point for user list
     // useEffect(() => {
     //     axios.get(`${backendurl}/users/list`)
@@ -37,7 +40,9 @@ export default function SignUp() {
 
     const handleCreateUser = () => {
         axios.post(`${backendurl}user/register/${newUserName}&${password}&${1}`)
+        console.log(`${backendurl}user/register/${newUserName}&${password}&${1}`)
         .then(() => {
+            
             setIsModalOpen(false);
             setRefresh(refresh +1 );
             setIsUserCreated(true);
@@ -59,9 +64,9 @@ export default function SignUp() {
      
         
          <div>
-             {
-             isUserCreated &&
-             <p id = "user-created">"User was created"</p>
+             {isUserCreated  &&
+                 <p id = "user-created">The user was created </p>
+             
            
              }
 
