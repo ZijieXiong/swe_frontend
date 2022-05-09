@@ -85,28 +85,30 @@ export default function About({ customerReview }) {
           <h1 className="About_Title">Let Us Know</h1>
           <div className="wrapper">
             <form>
-              <p id="feedback-form-title">Feedback Form</p>
-              <label>
-                <p>Name</p>
-                <input name="name" />
-              </label>
+              <fieldset>
+                <p id="feedback-form-title">Feedback Form</p>
+                <label>
+                  <p>Name</p>
+                  <input name="name" />
+                </label>
 
-              <label>
-                <p>Feedback</p>
-              </label>
-              <input
-                value={leaveReview}
-                onChange={(e) => setLeaveReview(e.target.value)}
-                required
-              />
+                <label>
+                  <p>Feedback</p>
+                </label>
+                <input
+                  value={leaveReview}
+                  onChange={(e) => setLeaveReview(e.target.value)}
+                  required
+                />
 
-              <button
-                id="about_submit_button"
-                onClick={handleSubmit}
-                type="submit"
-              >
-                Submit
-              </button>
+                <button
+                  id="about_submit_button"
+                  onClick={handleSubmit}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </fieldset>
             </form>
           </div>
         </div>
